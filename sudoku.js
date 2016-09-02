@@ -78,6 +78,8 @@ class Sudoku {
 
   solve(nx = 0, ny = 0) {
     var grid = this._board[nx][ny];
+
+    // Code Back track here
     if(grid == "0"){
       var index = 0;
       for(var idx = 0; idx < this._values.length; idx++){
@@ -93,6 +95,7 @@ class Sudoku {
         }
       }
     }
+    // Code Back track here
 
     if (nx < 8){
       this.solve(nx + 1, ny);
